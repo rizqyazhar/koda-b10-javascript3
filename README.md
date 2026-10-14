@@ -57,19 +57,17 @@ F --tidak--> B
 
   A@{shape: sm-circ, label: "start"}
   B@{shape: fr-circ, label: "end"}
-  C@{shape: rect, label: "k = 0"}
+  C@{shape: rect, label: "a = 0"}
   D@{shape: rect, label: "b = 0"}
-  E@{shape: rect, label: "k++"}
+  E@{shape: rect, label: "a++"}
   F@{shape: rect, label: "b++"}
   G@{shape: rect, label: "hasil = ""}
-  H@{shape: rect, label: "b++"}
-  I@{shape: diam, label: "k < 5"}
-  J@{shape: diam, label: "b < 10"}
-  K@{shape: diam, label: "b < 5"}
-  L@{shape: lean-r, label: "hasil"}
+  H@{shape: diam, label: "a < 5"}
+  I@{shape: diam, label: "b < 10"}
+  J@{shape: lean-r, label: "hasil"}
 
-  A --> C --> I --TRUE--> G --> D --> J -->
+  A --> C --> H --TRUE--> G --> D --> I --> 
 
-  I --FALSE--> B
+  H --FALSE--> B
 
 ```
