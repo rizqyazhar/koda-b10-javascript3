@@ -1,6 +1,6 @@
-for (let i = 0; i < 5; i++) {
+for (let a = 0; a < 5; a++) {
   let hasil = "";
-  for (let j = 0; j < 5; j++) {
+  for (let b = 0; b < 5; b++) {
     hasil += "*";
   }
   console.log(hasil);
