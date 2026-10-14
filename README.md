@@ -8,18 +8,18 @@ flowchart TD
 
 A@{shape: sm-circ, label: "start"}
 B@{shape: fr-circ, label: "end"}
-C@{shape: rect, label: "i"}
-D@{shape: rect, label: "j"}
+C@{shape: rect, label: "a = 0"}
+D@{shape: rect, label: "b = 0"}
 E@{shape: rect, label: "hasil = #quot;#quot;"}
-F@{shape: diam, label: "i < 5"}
-G@{shape: diam, label: "j < 5"}
-H@{shape: rect, label: "i++"}
-I@{shape: rect, label: "j++"}
+F@{shape: diam, label: "a < 5"}
+G@{shape: diam, label: "b < 5"}
+H@{shape: rect, label: "a++"}
+I@{shape: rect, label: "b++"}
 J@{shape: rect, label: "hasil += #quot;*#quot;"}
 K@{shape: lean-r, label: "hasil"}
 
-A --> C --> F --iya--> E --> D --> G --iya--> J --> I --> D
-G --tidak--> K --> H --> C
+A --> C --> F --iya--> E --> D --> G --iya--> J --> I --> G
+G --tidak--> K --> H --> F
 
 F --tidak--> B
 
