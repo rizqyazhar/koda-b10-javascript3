@@ -53,20 +53,35 @@ F --tidak--> B
 ## Perulangan pola 3
 
 ```mermaid
-  flowchart TD
+  flowchart LR
 
   A@{shape: sm-circ, label: "start"}
   B@{shape: fr-circ, label: "end"}
   C@{shape: rect, label: "a = 0"}
-  D@{shape: rect, label: "b = 0"}
+  D@{shape: rect, label: "b = 4"}
   E@{shape: rect, label: "a++"}
-  F@{shape: rect, label: "b++"}
-  G@{shape: rect, label: "hasil = ""}
+  G@{shape: rect, label: "hasil = #quot;#quot;"}
   H@{shape: diam, label: "a < 5"}
-  I@{shape: diam, label: "b < 10"}
+  I@{shape: diam, label: "b >= a"}
   J@{shape: lean-r, label: "hasil"}
+  K@{shape: rect, label: "hasil += #quot; #quot;"}
+  L@{shape: rect, label: "b--"}
+  M@{shape: rect, label: "c = 0"}
+  N@{shape: diam, label: "c < (a * 2) + 1"}
+  O@{shape: rect, label: "hasil += #quot;*#quot;"}
+  P@{shape: rect, label: "c++"}
+  Q@{shape: diam, label: "c % 2 == 0"}
+  R@{shape: rect, label: "hasil += #quot; #quot;"}
 
-  A --> C --> H --TRUE--> G --> D --> I --> 
+  A --> C --> H --TRUE--> G --> D --> I --TRUE--> K --> L --> I
+
+  I --FALSE--> M --> N --TRUE--> Q --TRUE--> O
+
+  Q --FALSE--> R
+
+  O & R --> P --> N
+
+  N --FALSE--> J --> E --> H
 
   H --FALSE--> B
 
