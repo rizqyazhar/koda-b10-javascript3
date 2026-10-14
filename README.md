@@ -4,7 +4,7 @@
 
 ```mermaid
 
-flowchart TD
+flowchart LR
 
 A@{shape: sm-circ, label: "start"}
 B@{shape: fr-circ, label: "end"}
@@ -29,7 +29,7 @@ F --tidak--> B
 
 ```mermaid
 
-flowchart TD
+flowchart LR
 
 A@{shape: sm-circ, label: "start"}
 B@{shape: fr-circ, label: "end"}
